@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Snack menu and pickup information for The Snack Shack.">
+  <title>The Snack Shack | Snack menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#menu" aria-label="The Snack Shack home">
+        <span class="brand-mark" aria-hidden="true">🥨</span>
+        <span>The Snack Shack</span>
+      </a>
+      <a class="cart-pill" href="#order" id="cartLink" aria-label="View order, 0 items">
+        <span aria-hidden="true">🛒</span> <span id="cartCount">0</span> <span class="cart-word">items</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">SNACKS FOR YOUR LUNCH BREAK</p>
+        <h1 id="page-title">Choose a snack<br><span>for your lunch break.</span></h1>
+        <p class="hero-text">This menu lists the snacks available for pickup at school.</p>
+      </div>
+      <div class="hero-art">
+        <img src="images/hero.png" alt="Assorted packaged snacks and chips">
+      </div>
+    </section>
+
+    <section class="pickup-banner" aria-label="Pickup details">
+      <span class="pickup-icon" aria-hidden="true">📍</span>
+      <div><strong>Pickup at the Student Commons</strong><span>Lunch period · 11:35 AM–12:05 PM</span></div>
+      <span class="open-badge"><span class="status-dot"></span> The Snack Shack is open today.</span>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading"><div><p class="eyebrow">AVAILABLE SNACKS</p><h2 id="menu-title">Today’s menu</h2></div></div>
+      <div class="category-tabs" role="tablist" aria-label="Menu categories">
+        <button class="tab active" type="button" role="tab" aria-selected="true" data-category="all">All snacks</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-category="sweet">Sweet</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-category="salty">Salty</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section class="order-section" id="order" aria-labelledby="order-title">
+      <div class="order-card">
+        <div class="order-header"><div><p class="eyebrow">YOUR SELECTED ITEMS</p><h2 id="order-title">Your order</h2></div><span class="order-count" id="orderCount">0 items</span></div>
+        <div class="order-items" id="orderItems"><div class="empty-order"><span aria-hidden="true">🧃</span><p>Your order is empty.</p></div></div>
+        <div class="order-footer" id="orderFooter" hidden>
+          <div class="total-row"><span>Total</span><strong id="orderTotal">$0.00</strong></div>
+          <button class="primary-button checkout-button" type="button" id="checkoutButton">Submit this order <span aria-hidden="true">→</span></button>
+          <button class="clear-button" type="button" id="clearButton">Clear order</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="confirmed" id="confirmation" hidden tabindex="-1" aria-live="polite">
+      <div class="confirmed-icon">✓</div><p class="eyebrow">ORDER CONFIRMATION</p><h2>Your order has been received.</h2>
+      <p id="confirmationText">Pickup is at the Student Commons during the lunch period.</p>
+      <div class="pickup-details"><div><span>📍</span><strong>Student Commons</strong></div><div><span>⏰</span><strong>11:35 AM–12:05 PM</strong></div></div>
+      <button class="secondary-button" id="newOrderButton" type="button">Start a new order</button>
+    </section>
+  </main>
+
+  <footer><p>© 2026 The Snack Shack</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
